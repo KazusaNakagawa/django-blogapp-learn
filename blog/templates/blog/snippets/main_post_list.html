@@ -1,0 +1,33 @@
+{% for post in object_list %}
+{% if user.is_authenticated or post.is_public %}
+{% load static %}
+<div class=" card mb-3 post-line">
+  <div class="row no-gutters">
+    <div class="col-md-4 my-auto">
+      {% if post.image %}
+      <a href="{% url 'blog:post_detail' post.id %}">
+        <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.title }}">
+      </a>
+      {% else %}
+      <a href="{% url 'blog:post_detail' post.id %}">
+        <img class="card-img-top" src="{% static '/blog/img/noimage.png' %}">
+      </a>
+      {% endif %}
+    </div><!-- col-md-4 my-auto -->
+    <div class="col-md-8">
+      {% if not post.is_public %}
+      <h5><span class="badge badge-secondary">下書き</span></h5>
+      {% endif %}
+      <a class="b-keep" href="{% url 'blog:post_detail' post.id %}">
+        <p id="post-title">{{ post.title }}</p>
+      </a>
+      <p class="card-text post-data"><img src="{% static '/blog/img/time.svg' %}"> {{ post.published_at|date }}</p>
+      <p class="post-headline">{{ post.content|safe|truncatechars:60 }}</p>
+
+    </div>
+  </div><!-- row no-gutters -->
+</div>
+{% endif %}
+{% empty %}
+<p>まだ投稿はありません。</p>
+{% endfor %}

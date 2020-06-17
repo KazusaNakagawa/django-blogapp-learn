@@ -1,0 +1,95 @@
+/******************************
+変数宣言している
+******************************/
+:root {
+  --main-text: #333;
+  --main-bg: #fff;
+  --dark-bg: #000;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-text: #ddd;
+    --main-bg: #000;
+  }
+  .post-line {
+    background: none;
+  }
+}
+
+body {
+  color: var(--main-text);
+  background-color: var(--main-bg);
+  /*transition: .5s;*/
+}
+.light-theme {
+  background: #fff;
+  background-color: #61aab533;
+  color: var(--main-text);
+}
+.dark-theme {
+  background: var(--dark-bg);
+  color: #ddd
+}
+/******************************
+　　検索
+******************************/
+.dark-theme .search {
+  background: #575858;
+  color: var(--main-text);
+  border: none
+}
+
+/* 投稿フォーム */
+.form-control {
+    background-color: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+.wrap {
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+h1 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+p {
+  font-size: 1.0rem;
+  line-height: 1.5;
+}
+h1, p {
+  margin-bottom: 1rem;
+}
+a {
+  color: #0bd
+}
+.card-body {
+  /*background-color: var(--dark-bg);*/
+  color: #000;
+}
+.card-header {
+  background-color: #3C3D34;
+  color: #E8E8E8;
+}
+/******************************
+　Toggle dark theme button
+******************************/
+.dark-theme-bottom {
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+}
+
+/***********************
+ nav-link
+***********************/
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark
+.navbar-nav .nav-link.active, .navbar-dark .navbar-nav
+.nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+  color: #000;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #000;
+}
+.navbar-dark .navbar-nav .nav-link.disabled {
+    color: #000;
+}

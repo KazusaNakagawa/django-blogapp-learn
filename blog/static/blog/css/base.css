@@ -1,0 +1,348 @@
+/***********************
+ header
+***********************/
+#title {
+  font-size:2rem
+}
+#header ul{
+    padding: 0px;
+    margin: .75rem;
+}
+#header ul li {
+    display: inline;
+    margin-right: 1em;
+    font-family: "Trebuchet MS", sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+#header ul li a:hover{
+    /*border-bottom: dotted 1px #fff;*/
+}
+
+/***********************
+
+***********************/
+#header a, #navbar a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ddd;
+}
+#header a:hover, #navbar a:hover{
+  color: #747a7d
+}
+/* title hover no color change */
+#title a:hover {
+  color: #ddd
+}
+#mode {
+  color: #ddd;
+  float: right;
+  position: relative;
+  left: .5em;
+  bottom: .1em;
+}
+.light-theme #mode::before {
+   content: "light ";
+}
+.dark-theme #mode::before {
+   content: "dark ";
+}
+.btn-switch:hover {
+  color: #747a7d;
+  cursor: pointer
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  #header, #navbar{
+    margin: 0 8rem 0 7rem;
+  }
+}
+
+@media screen and (min-width:960px) and (max-width:1279px) {
+  .logo h1 {
+  font-size: 2.0rem;
+  }
+  #header, #navbar {
+    margin: 0rem 5rem 0rem 5rem;
+  }
+}
+@media screen and (min-width:479px) and (max-width:959px) {
+   #header, #navbar {
+    margin: 2rem 3rem 1rem 2rem;
+  }
+  #side section {
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 320px) and (max-width: 478px) {
+  .logo h1 {
+    font-size: 2.0rem;
+    margin: -0.5rem 0rem 0rem .5rem;
+  }
+  .logo img {
+    width: 3.3rem;
+    margin-left: 3rem
+  }
+  #header, #navbar {
+    margin: 1rem -4rem 1rem 0rem;
+　}
+  #side section {
+    margin-top: 4rem;
+    margin-left: .5rem;
+  }
+  #header a, #navbar a {
+    margin-left: .5rem;
+  }
+  .dropdown, .dropleft, .dropright, .dropup {
+    margin-bottom: 2rem;
+  }
+}
+header {
+  margin-bottom: 1rem;
+}
+/***********************
+ header footer wide
+***********************/
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+header, footer {
+  background-color: #333;
+}
+.dropdown-menu p{
+  zoom:1;
+  overflow:hidden;
+  margin:1rem;
+}
+.dropdown-menu p{
+  margin-top:-1px;
+  border-bottom:1px dotted #666;
+}
+/***********************
+ font
+***********************/
+* {
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "ＭＳ Ｐゴシック", sans-serif;
+}
+.b-keep p {
+  font-weight: bold;
+}
+/***********************
+ main
+***********************/
+.main-top {
+  margin-top: 2rem;
+}
+.post-data {
+  font-size: small;
+}
+
+.logo {
+  display: inline-block;
+}
+/***********************
+ menu
+***********************/
+a.side-tag {
+  /*color: #fff;*/
+  text-decoration: none;
+  white-space: nowrap;
+}
+/***********************
+ side profile
+***********************/
+p#profile-name {
+  text-align: center;
+  font-weight: bold;
+}
+p#profile-note {
+  margin: 1em;
+  font-size: 14px;
+
+}
+
+/***********************
+ button
+***********************/
+.btn {
+  padding: 6px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+.demo1 {
+  justify-content: center;
+   color: #fff;
+}
+
+.btn a:hover {
+  opacity: 0.7;
+}
+.btn-primary {
+  padding: 6px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /* margin-right: -15px; */
+    margin-left: -15px;
+}
+/***********************
+ post list
+***********************/
+#post-title {
+  font-size: large;
+}
+.no-gutters>.col, .no-gutters>[class*=col-] {
+    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+/***********************
+ card
+***********************/
+.card {
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  border: #96afaf99;
+  border-bottom-style: dotted;
+}
+/***********************
+ comment
+***********************/
+.comment-area {
+  margin-top: 3rem;
+}
+
+/***********************
+ breadcrumb
+***********************/
+.breadcrumb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #fff;
+    border-radius: .25rem;
+    font-size: smaller;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">" !important;
+  color: #ddd;
+}
+.breadcrumb-item a {
+  color: #6c757d;
+}
+.breadcrumb-item a:hover {
+    color: #333;
+}
+/***********************
+ footer
+***********************/
+footer {
+  margin-top: 7rem;
+}
+#footer {
+ margin: 1rem;
+ height: 2rem;
+ color: #ddd
+}
+
+#footer li {
+  position:relative;
+  list-style-type: none;
+  /*border: #999 solid 1px;*/
+  margin: 0 0 10px 0;
+  padding: 10px 30px;
+}
+/***********************
+ nav
+***********************/
+.dropdown-menu {
+    position: absolute;
+    /* top: 100%; */
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    /* margin: .125rem 0 0; */
+    font-size: 1rem;
+    color: #424a52;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    /* background-clip: padding-box; */
+    border: 1px solid rgba(0,0,0,.15);
+    /* border-radius: .25rem; */
+}
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  float: none;
+  background: #444;
+}
+.light-theme .navbar-nav .dropdown-menu {
+  color: var(--main-text);
+  font-weight:bold;
+}
+#dropdown-menu {
+  margin-left: 1rem
+}
+.nav-items {
+  margin-left: 3rem;
+  padding-bottom: 1rem;
+  line-height: 2.0rem;
+}
+/***********************
+ comment
+***********************/
+.comment {
+  margin: 2rem 1rem 0rem 0rem;
+}
+.col-lg-8 {
+  padding: 2em;
+  background-color: #fff;
+}
+
+@media (max-width: 640px) {
+  #footer li {
+    position: relative;
+    list-style-type: none;
+    margin: 0px 0 6px 0;
+    padding: 0px 3px;
+  }
+  #footer {
+    height: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  #header, #navbar {
+    margin: 0
+  }
+}
+.post-headline {
+  font-size: .9em;
+}
