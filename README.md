@@ -9,13 +9,13 @@
 - virtualenv  
 ~~~
 # install
-$ sudo pip install virtualenv
+$ pip install virtualenv
 
 # 仮想環境作成
-$ virtualenv [<make nane>]
+$ virtualenv <make name>
 
 # 仮想環境に入る
-$ source [<作成した名前>]/bin/activate
+$ source <make name>/bin/activate
 
 # 抜ける
 $ deactivate
@@ -26,10 +26,4 @@ $ deactivate
 ~~~
 ex)
 $ export SECRET_KEY='< input my key >'
-~~~
-
-### database : db.sqlite3
-~~~
-$ python manage.py makemigrations
-$ python manage.py migrate
 ~~~
